@@ -186,7 +186,11 @@ $string['javascriptloading'] = 'Waiting for JavaScript...';
 $string['action'] = 'Action';
 $string['upload'] = 'Upload';
 $string['create'] = 'Create';
-$string['editor'] = 'Editor';
+// START UCLA MOD: CCLE-6566 - H5P UI change to "Editor" Field.
+// $string['editor'] = 'Editor';
+$string['editor'] = 'Content Types';
+// END UCLA MOD: CCLE-6566.
+
 
 $string['invalidlibrary'] = 'Invalid library';
 $string['nosuchlibrary'] = 'No such library';
@@ -273,7 +277,10 @@ $string['welcomecommunity'] = 'We hope you will enjoy H5P and get engaged in our
 $string['welcomecontactus'] = 'If you have any feedback, don\'t hesitate to <a {$a}>contact us</a>. We take feedback very seriously and are dedicated to making H5P better every day!';
 $string['missingmbstring'] = 'The mbstring PHP extension is not loaded. H5P need this to function properly';
 $string['wrongversion'] = 'The version of the H5P library {$a->%machineName} used in this content is not valid. Content contains {$a->%contentLibrary}, but it should be {$a->%semanticsLibrary}.';
-$string['invalidlibrary'] = 'The H5P library {$a->%library} used in the content is not valid';
+// START UCLA MOD: CCLE-6566 - H5P UI change to "Editor" Field.
+// Deleting the duplicate language string found for invalidlibrary.
+// $string['invalidlibrary'] = 'The H5P library {$a->%library} used in the content is not valid';
+// END UCLA MOD: CCLE-6566.
 
 // Setup errors.
 $string['oldphpversion'] = 'Your PHP version is outdated. H5P requires version 5.2 to function properly. Version 5.6 or later is recommended.';
