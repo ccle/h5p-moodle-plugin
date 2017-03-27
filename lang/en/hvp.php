@@ -197,7 +197,11 @@ $string['javascriptloading'] = 'Waiting for JavaScript...';
 $string['action'] = 'Action';
 $string['upload'] = 'Upload';
 $string['create'] = 'Create';
-$string['editor'] = 'Editor';
+// START UCLA MOD: CCLE-6566 - H5P UI change to "Editor" Field.
+// $string['editor'] = 'Editor';
+$string['editor'] = 'Content Types';
+// END UCLA MOD: CCLE-6566.
+
 
 $string['invalidlibrary'] = 'Invalid library';
 $string['nosuchlibrary'] = 'No such library';

@@ -84,3 +84,11 @@
 .content-upgrade-log {
   color: red;
 }
+/* START UCLA MOD: CCLE-6566 - H5P UI change to "Editor" field */
+.mform #fitem_id_h5peditor .fstaticlabel {
+    color: #D44950;
+}
+.mform #fitem_id_h5peditor .fstaticlabel:after {
+    content: url('[[pix:req]]');
+}
+/* END UCLA MOD: CCLE-6566 */
