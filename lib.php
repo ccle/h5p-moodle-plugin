@@ -422,3 +422,35 @@ function hvp_get_completion_state($course, $cm, $userid, $type) {
     }
     return false;
 }
+
+// START UCLA MOD: CCLE-7048 - Add "View all submissions" link to H5P Quiz administration block.
+/**
+ * extend hvp navigation settings
+ *
+ * @param settings_navigation $settings
+ * @param navigation_node $navref
+ * @return void
+ */
+function hvp_extend_settings_navigation(settings_navigation $settings, navigation_node $navref) {
+    global $PAGE;
+
+    $cm = $PAGE->cm;
+    if (!$cm) {
+        return;
+    }
+
+    $context = $cm->context;
+    $course = $PAGE->course;
+
+    if (!$course) {
+        return;
+    }
+
+    // Link to view all submissions.
+    if (has_capability('mod/hvp:viewallresults', $context)) {
+        $link = new moodle_url('/mod/hvp/grade.php', array('id' => $cm->id));
+        $node = $navref->add(get_string('viewgrading', 'hvp'), $link, navigation_node::TYPE_SETTING);
+    }
+}
+// END UCLA MOD: CCLE-7048.
+
