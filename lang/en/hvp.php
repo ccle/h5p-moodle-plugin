@@ -351,6 +351,9 @@ $string['licenseCC010'] = 'CC0 1.0 Universal (CC0 1.0) Public Domain Dedication'
 $string['licenseCC010U'] = 'CC0 1.0 Universal';
 $string['licenseversion'] = 'License Version';
 
+// START UCLA MOD: CCLE-7048 - Add "View all submissions" link to H5P Quiz administration block.
+$string['viewgrading'] = 'View all submissions';
+// END UCLA MOD: CCLE-7048.
 // Embed.
 $string['embedloginfailed'] = 'You do not have access to this content. Try logging in.';
 
