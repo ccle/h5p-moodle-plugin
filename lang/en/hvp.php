@@ -389,6 +389,9 @@ $string['additionalinfo'] = 'Additional Information';
 $string['authorcomments'] = 'Author comments';
 $string['authorcommentsdescription'] = 'Comments for the editor of the content (This text will not be published as a part of copyright info)';
 
+// START UCLA MOD: CCLE-7048 - Add "View all submissions" link to H5P Quiz administration block.
+$string['viewgrading'] = 'View all submissions';
+// END UCLA MOD: CCLE-7048.
 // Embed.
 $string['embedloginfailed'] = 'You do not have access to this content. Try logging in.';
 
