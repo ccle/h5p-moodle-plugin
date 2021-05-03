@@ -103,6 +103,12 @@ $settings = array(
                     'text' => get_string('user', 'hvp'),
                     'sortable' => true
                 ),
+                // START UCLA MOD: CCLE-9455 - Add UID to reports exported in Moodle.
+                (object) array(
+                    'text' => get_user_field_name('idnumber'),
+                    'sortable' => true
+                ),
+                // END UCLA MOD: CCLE-9455.
                 (object) array(
                     'text' => get_string('score', 'hvp'),
                     'sortable' => true

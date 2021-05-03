@@ -153,6 +153,9 @@ class results {
 
             $rows[] = array(
                 $userlink,
+                // START UCLA MOD: CCLE-9455 - Add UID to reports exported in Moodle.
+                $result->idnumber,
+                // END UCLA MOD: CCLE-9455.
                 $result->rawgrade === null ? '—' : (int) $result->rawgrade,
                 $result->rawgrade === null ? '—' : (int) $result->rawgrademax,
                 empty($result->timemodified) ? '—' : date('Y/m/d – H:i', $result->timemodified),
@@ -204,11 +207,13 @@ class results {
         $from = $this->get_from_sql();
 
         // Execute query and get results.
+        // START UCLA MOD: CCLE-9455 - Add UID to reports exported in Moodle.
         return $this->get_sql_results("
                 SELECT u.id,
                        i.id AS gradeitemid,
                        g.id AS gradeid,
                        {$fields}
+                       u.idnumber,
                        g.rawgrade,
                        g.rawgrademax,
                        g.timemodified,
@@ -221,6 +226,7 @@ class results {
                 ", $args,
                 $this->offset,
                 $this->limit);
+        // END UCLA MOD: CCLE-9455.
     }
 
     /**
